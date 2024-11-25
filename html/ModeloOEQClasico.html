@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo EOQ-Clásico</title>
+    <link rel="stylesheet" href="../style/styles.css">
+    <link rel="stylesheet" href="../style/table.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation"></script>
+</head>
+<body>
+    <header>
+        <nav class="header__menu">
+            <a class="header__menu__link" href="../index.html">Inicio</a>
+            <a class="header__menu__link" href="Teoria de cola.html">Teoría de colas</a>
+            <a class="header__menu__link" href="ModeloOEQClasico.html">Modelo EOQ Clasico</a>
+            <a class="header__menu__link" href="Modelo ABC.html">Modelo ABC</a>
+            <a class="header__menu__link" href="Modelo OEQ-Lote.html">Modelo OEQ Lote</a>
+        </nav>
+    </header>
+
+    <main class="presentacion">
+        <section class="presentacion__contenido">
+            <h1 class="presentacion__contenido__titulo">El Modelo <strong class="titulo-destaque">EOQ Clásico</strong></h1>
+
+            <div class="container">
+                <h2>Calculadora de Cantidad Económica de Pedido (EOQ)</h2>
+                <form id="eoq-form">
+                    <label for="demand">Demanda Anual (unidades):</label>
+                    <input type="number" id="demand" required>
+
+                    <label for="orderCost">Costo de Pedido ($):</label>
+                    <input type="number" id="orderCost" required>
+
+                    <label for="holdingCost">Costo de Mantenimiento ($/unidad):</label>
+                    <input type="number" id="holdingCost" required>
+
+                    <label for="workingDays">Días de Trabajo al Año:</label>
+                    <input type="number" id="workingDays" required>
+
+                    <label>¿Tiene el lead time?</label>
+                    <input type="radio" id="leadTimeYes" name="leadTimeOption" value="yes"> Sí
+                    <input type="radio" id="leadTimeNo" name="leadTimeOption" value="no" checked> No
+
+                    <div id="leadTimeInput" style="display: none;">
+                        <label for="leadTime">Tiempo de entrega (días):</label>
+                        <input type="number" id="leadTime">
+                    </div>
+
+                    <button type="button" onclick="calculateEOQ()">Calcular EOQ</button>
+                </form>
+                <div id="result"></div>
+                <canvas id="eoqInventoryChart" width="800" height="400"></canvas>
+            </div>
+        </section>
+    </main>
+
+    <footer></footer>
+
+    <!-- Scripts -->
+    <script src="../Scripts/handleForm.js"></script>
+</body>
+</html>

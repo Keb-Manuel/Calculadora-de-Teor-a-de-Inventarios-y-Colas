@@ -1,0 +1,56 @@
+/* Estilo general para el cuerpo */
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo de la tabla */
+table {
+    width: 43%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+    border: 2px solid #00ffdd; /* Borde llamativo */
+    box-shadow: 0 0 15px rgba(0, 255, 221, 0.5);
+    border-radius: 8px;
+}
+
+/* Estilo para los encabezados de la tabla */
+th {
+    padding: 15px;
+    background-color: rgba(0, 255, 221, 0.3); /* Color semitransparente en el encabezado */
+    color: #00ffdd;
+    font-size: 18px;
+    border: 2px solid #00ffdd;
+}
+
+/* Estilo para las celdas de la tabla */
+td {
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo semitransparente para celdas */
+    border: 1px solid #00ffdd;
+    text-align: center;
+    color: #fff;
+}
+
+/* Efecto hover sobre las filas */
+tr:hover {
+    background-color: rgba(0, 255, 221, 0.2);
+    transform: scale(1.02); /* Pequeño efecto de zoom */
+    transition: all 0.3s ease;
+}
+
+/* Estilo alternado para las filas */
+tr:nth-child(even) td {
+    background-color: rgba(0, 255, 221, 0.1);
+}
+
+/* Efecto al hacer hover en una celda */
+td:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    color: #000;
+    cursor: pointer;
+}

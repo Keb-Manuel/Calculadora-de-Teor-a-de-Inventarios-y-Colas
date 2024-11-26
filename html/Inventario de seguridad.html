@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/styles.css">
+    <title>Calculadora Inventario de Seguridad</title>
+</head>
+<body>
+    <header>
+        <nav class="header__menu">
+            <a class="header__menu__link" href="../index.html">Inicio</a>
+            <a class="header__menu__link" href="Teoria de cola.html">Teoría de colas</a>
+            <a class="header__menu__link" href="ModeloOEQClasico.html">Modelo EOQ Clasico</a>
+            <a class="header__menu__link" href="Modelo ABC.html">Modelo ABC</a>
+            <a class="header__menu__link" href="Modelo OEQ-Lote.html">Modelo OEQ Lote</a>
+            <a class="header__menu__link" href="Inventario de seguridad.html">Inventario de Seguridad</a>
+        </nav>
+    </header>
+
+    <main class="presentacion">
+        <section class="presentacion__contenido">
+          <div class="container">
+            <h1>Calculadora de Inventario de Seguridad</h1>
+            <form id="inventoryForm">
+              <label for="weeklyDemand">Demanda semanal promedio (unidades):</label>
+              <input type="number" id="weeklyDemand" required>
+              
+              <label for="leadTime">Tiempo de entrega (semanas):</label>
+              <input type="number" id="leadTime" required>
+              
+              <label for="stdDev">Desviación estándar semanal (unidades):</label>
+              <input type="number" id="stdDev" required>
+              
+              <label for="zValue">Valor de Z (nivel de servicio):</label>
+              <input type="number" id="zValue" step="0.01" required>
+              
+              <button type="submit">Calcular</button>
+            </form>
+            
+            <div id="result" class="result"></div>
+          </div>
+        </section>
+    </main>
+    <script src="../Scripts/script.js"></script>
+</body>
+</html>
+
